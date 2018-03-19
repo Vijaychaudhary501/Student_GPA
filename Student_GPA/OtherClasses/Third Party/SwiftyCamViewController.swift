@@ -91,7 +91,7 @@ open class SwiftyCamViewController: UIViewController {
 
 	/// Public Camera Delegate for the Custom View Controller Subclass
 
-	public var cameraDelegate: SwiftyCamViewControllerDelegate?
+	//public var cameraDelegate: SwiftyCamViewControllerDelegate?
 
 	/// Maxiumum video duration if SwiftyCamButton is used
 
@@ -212,7 +212,7 @@ open class SwiftyCamViewController: UIViewController {
 
 	/// PreviewView for the capture session
 
-	fileprivate var previewLayer                 : PreviewView!
+	//fileprivate var previewLayer                 : PreviewView!
 
 	/// UIView for front facing flash
 
@@ -238,14 +238,14 @@ open class SwiftyCamViewController: UIViewController {
 
 	override open func viewDidLoad() {
 		super.viewDidLoad()
-		previewLayer = PreviewView(frame: CGRect(x: 0.0, y: 0.0, width: view.bounds.width, height: view.bounds.height))
+		//previewLayer = PreviewView(frame: CGRect(x: 0.0, y: 0.0, width: view.bounds.width, height: view.bounds.height))
 
 		// Add Gesture Recognizers
 
-		addGestureRecognizersTo(view: previewLayer)
-
-		self.view.addSubview(previewLayer)
-		previewLayer.session = session
+//        addGestureRecognizersTo(view: previewLayer)
+//
+//        self.view.addSubview(previewLayer)
+//        previewLayer.session = session
 
 		// Test authorization status for Camera and Micophone
 
@@ -280,7 +280,7 @@ open class SwiftyCamViewController: UIViewController {
     
     
     override open func viewDidLayoutSubviews() {
-        previewLayer.frame = CGRect(x: 0.0, y: 0.0, width: view.bounds.width, height: view.bounds.height)
+//        previewLayer.frame = CGRect(x: 0.0, y: 0.0, width: view.bounds.width, height: view.bounds.height)
         super.viewDidLayoutSubviews()
     }
     
@@ -311,7 +311,7 @@ open class SwiftyCamViewController: UIViewController {
                 
                 // Preview layer video orientation can be set only after the connection is created
                 DispatchQueue.main.async {
-                    self.previewLayer.videoPreviewLayer.connection?.videoOrientation = self.getPreviewLayerOrientation()
+                  //  self.previewLayer.videoPreviewLayer.connection?.videoOrientation = self.getPreviewLayerOrientation()
                 }
                 
 			case .notAuthorized:
@@ -376,7 +376,7 @@ open class SwiftyCamViewController: UIViewController {
 			flashView = UIView(frame: view.frame)
 			flashView?.alpha = 0.0
 			flashView?.backgroundColor = UIColor.white
-			previewLayer.addSubview(flashView!)
+			//previewLayer.addSubview(flashView!)
 
 			UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
 				self.flashView?.alpha = 1.0
@@ -419,7 +419,7 @@ open class SwiftyCamViewController: UIViewController {
 			flashView = UIView(frame: view.frame)
 			flashView?.backgroundColor = UIColor.white
 			flashView?.alpha = 0.85
-			previewLayer.addSubview(flashView!)
+		//	previewLayer.addSubview(flashView!)
 		}
 
 		sessionQueue.async { [unowned self] in
@@ -437,15 +437,15 @@ open class SwiftyCamViewController: UIViewController {
 					movieFileOutputConnection?.isVideoMirrored = true
 				}
 
-				movieFileOutputConnection?.videoOrientation = self.getVideoOrientation()
+				//movieFileOutputConnection?.videoOrientation = self.getVideoOrientation()
 
 				// Start recording to a temporary file.
 				let outputFileName = UUID().uuidString
 				let outputFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
-				movieFileOutput.startRecording(toOutputFileURL: URL(fileURLWithPath: outputFilePath), recordingDelegate: self)
+				//movieFileOutput.startRecording(toOutputFileURL: URL(fileURLWithPath: outputFilePath), recordingDelegate: self)
 				self.isVideoRecording = true
 				DispatchQueue.main.async {
-					self.cameraDelegate?.swiftyCam(self, didBeginRecordingVideo: self.currentCamera)
+					//sself.cameraDelegate?.swiftyCam(self, didBeginRecordingVideo: self.currentCamera)
 				}
 			}
 			else {
@@ -478,7 +478,7 @@ open class SwiftyCamViewController: UIViewController {
 				})
 			}
 			DispatchQueue.main.async {
-				self.cameraDelegate?.swiftyCam(self, didFinishRecordingVideo: self.currentCamera)
+				//self.cameraDelegate?.swiftyCam(self, didFinishRecordingVideo: self.currentCamera)
 			}
 		}
 	}
@@ -522,7 +522,7 @@ open class SwiftyCamViewController: UIViewController {
 
 			self.addInputs()
 			DispatchQueue.main.async {
-				self.cameraDelegate?.swiftyCam(self, didSwitchCameras: self.currentCamera)
+				//self.cameraDelegate?.swiftyCam(self, didSwitchCameras: self.currentCamera)
 			}
 
 			self.session.startRunning()
@@ -722,7 +722,7 @@ open class SwiftyCamViewController: UIViewController {
         }
     }
 
-	fileprivate func getVideoOrientation() -> AVCaptureVideoOrientation {
+	/*fileprivate func getVideoOrientation() -> AVCaptureVideoOrientation {
 		guard shouldUseDeviceOrientation, let deviceOrientation = self.deviceOrientation else { return previewLayer!.videoPreviewLayer.connection.videoOrientation }
 
 		switch deviceOrientation {
@@ -735,7 +735,7 @@ open class SwiftyCamViewController: UIViewController {
 		default:
 			return .portrait
 		}
-	}
+	}*/
 
 	fileprivate func getImageOrientation(forCamera: CameraSelection) -> UIImageOrientation {
 		guard shouldUseDeviceOrientation, let deviceOrientation = self.deviceOrientation else { return forCamera == .rear ? .right : .leftMirrored }
@@ -782,7 +782,7 @@ open class SwiftyCamViewController: UIViewController {
 
 					// Call delegate and return new image
 					DispatchQueue.main.async {
-						self.cameraDelegate?.swiftyCam(self, didTake: image)
+						//self.cameraDelegate?.swiftyCam(self, didTake: image)
 					}
 					completionHandler(true)
 				} else {
@@ -934,7 +934,7 @@ open class SwiftyCamViewController: UIViewController {
 	}
 }
 
-extension SwiftyCamViewController : SwiftyCamButtonDelegate {
+/*extension SwiftyCamViewController : SwiftyCamButtonDelegate {
 
 	/// Sets the maximum duration of the SwiftyCamButton
 
@@ -1138,7 +1138,7 @@ extension SwiftyCamViewController {
         panGesture.delegate = self
         view.addGestureRecognizer(panGesture)
 	}
-}
+}*/
 
 
 // MARK: UIGestureRecognizerDelegate

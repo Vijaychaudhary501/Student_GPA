@@ -8,6 +8,28 @@
 
 import UIKit
 
-class Utility: NSObject {
-
+class Utility{
+    
+    class func sharedInstance()->Utility {
+        struct Static {
+            static let instance = Utility()
+        }
+        return Static.instance
+    }
+    func showAlert(iTitleMessage:String,iMessage:String,iButtonTitle:String,iViewController:UIViewController){
+            let alert = UIAlertController.init(title: iTitleMessage, message: iMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "ok", style: .cancel, handler: nil))
+        iViewController.present(alert, animated: true, completion: nil)
+    }
+    func setstatusbarColorClear(){
+        
+    }
+    class func trim(str:String)->String{
+        return str.trimmingCharacters(in: .whitespaces)
+    }
+    func setstatusbarColor(){
+        
+    }
+    
+    
 }

@@ -28,7 +28,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var javaViewController: UIViewController!
     var goViewController: UIViewController!
     var nonMenuViewController: UIViewController!
-    var imageHeaderView: ImageHeaderView!
+   // var imageHeaderView: ImageHeaderView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -40,7 +40,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let swiftViewController = storyboard.instantiateViewController(withIdentifier: "SwiftViewController") as! SwiftViewController
+       /* let swiftViewController = storyboard.instantiateViewController(withIdentifier: "SwiftViewController") as! SwiftViewController
         self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
         
         let javaViewController = storyboard.instantiateViewController(withIdentifier: "JavaViewController") as! JavaViewController
@@ -56,7 +56,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.tableView.registerCellClass(BaseTableViewCell.self)
         
         self.imageHeaderView = ImageHeaderView.loadNib()
-        self.view.addSubview(self.imageHeaderView)
+        self.view.addSubview(self.imageHeaderView)*/
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +65,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
+        //self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
         self.view.layoutIfNeeded()
     }
     

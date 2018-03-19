@@ -11,7 +11,7 @@ import UIKit
 class MyProfileCell: UITableViewCell {
 
     @IBOutlet weak var selectView: UIView!
-    @IBOutlet weak var profileImageView: RemoteImageView!
+   // @IBOutlet weak var profileImageView: RemoteImageView!
     
     @IBOutlet weak var editBtn: UIButton!
     
@@ -29,7 +29,7 @@ class MyProfileCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        profileImageView.setCircleView(width: profileImageView.bounds.width)
+       // profileImageView.setCircleView(width: profileImageView.bounds.width)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -709,7 +709,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
  movieFileOutputConnection?.isVideoMirrored = true
  }
  
- movieFileOutputConnection?.videoOrientation = self.getVideoOrientation()
+// movieFileOutputConnection?.videoOrientation = self.getVideoOrientation()
  
  // Start recording to a temporary file.
  let outputFileName = UUID().uuidString

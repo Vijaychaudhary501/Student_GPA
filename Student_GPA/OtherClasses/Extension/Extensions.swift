@@ -33,6 +33,193 @@ extension Reachability {
         return (isReachable && !needsConnection)
     }
 }
+public extension UITableView {
+    
+    func registerCellClass(_ cellClass: AnyClass) {
+        let identifier = String.className(cellClass)
+        self.register(cellClass, forCellReuseIdentifier: identifier)
+    }
+    
+    func registerCellNib(_ cellClass: AnyClass) {
+        let identifier = String.className(cellClass)
+        let nib = UINib(nibName: identifier, bundle: nil)
+        self.register(nib, forCellReuseIdentifier: identifier)
+    }
+    
+    func registerHeaderFooterViewClass(_ viewClass: AnyClass) {
+        let identifier = String.className(viewClass)
+        self.register(viewClass, forHeaderFooterViewReuseIdentifier: identifier)
+    }
+    
+    func registerHeaderFooterViewNib(_ viewClass: AnyClass) {
+        let identifier = String.className(viewClass)
+        let nib = UINib(nibName: identifier, bundle: nil)
+        self.register(nib, forHeaderFooterViewReuseIdentifier: identifier)
+    }
+}
+extension String {
+    static func className(_ aClass: AnyClass) -> String {
+        return NSStringFromClass(aClass).components(separatedBy: ".").last!
+    }
+    
+    func substring(_ from: Int) -> String {
+        return self.substring(from: self.characters.index(self.startIndex, offsetBy: from))
+    }
+    
+    var length: Int {
+        return self.characters.count
+    }
+}
+extension UIColor {
+    
+    convenience init(hex: String) {
+        self.init(hex: hex, alpha:1)
+    }
+//    convenience init(hex: Int) {
+//        self.init(hex: hex, alpha: 1.0)
+//    }
+//     convenience init(hex: Int, alpha: Float) {
+//        if (0x000000 ... 0xFFFFFF) ~= hex {
+//            self.init(hex6: hex, alpha: alpha)
+//        } else {
+//            self.init()
+//            return nil
+//        }
+//    }
+    
+    convenience init(hex: String, alpha: CGFloat) {
+        var hexWithoutSymbol = hex
+        if hexWithoutSymbol.hasPrefix("#") {
+            hexWithoutSymbol = hex.substring(1)
+        }
+        
+        let scanner = Scanner(string: hexWithoutSymbol)
+        var hexInt:UInt32 = 0x0
+        scanner.scanHexInt32(&hexInt)
+        
+        var r:UInt32!, g:UInt32!, b:UInt32!
+        switch (hexWithoutSymbol.length) {
+        case 3: // #RGB
+            r = ((hexInt >> 4) & 0xf0 | (hexInt >> 8) & 0x0f)
+            g = ((hexInt >> 0) & 0xf0 | (hexInt >> 4) & 0x0f)
+            b = ((hexInt << 4) & 0xf0 | hexInt & 0x0f)
+            break;
+        case 6: // #RRGGBB
+            r = (hexInt >> 16) & 0xff
+            g = (hexInt >> 8) & 0xff
+            b = hexInt & 0xff
+            break;
+        default:
+            // TODO:ERROR
+            break;
+        }
+        
+        self.init(
+            red: (CGFloat(r)/255),
+            green: (CGFloat(g)/255),
+            blue: (CGFloat(b)/255),
+            alpha:alpha)
+    }
+}
+extension UIViewController {
+    
+    func setNavigationBarItem() {
+//        self.addLeftBarButtonWithImage(UIImage(named: "Notification")!) //ic_menu_black_24dp
+//        self.addRightBarButtonWithImage(UIImage(named: "Notification")!)//ic_notifications_black_24dp
+//        self.slideMenuController()?.removeLeftGestures()
+//        self.slideMenuController()?.removeRightGestures()
+//        self.slideMenuController()?.addLeftGestures()
+//        self.slideMenuController()?.addRightGestures()
+        let btNnewMessage = UIBarButtonItem(image: UIImage(named: "MessageTabIcon"), style: .plain, target: self, action: #selector(newMessagClick(_:)))// action:#selector(Class.MethodName) for swift 3
+        self.navigationItem.leftBarButtonItem  = btNnewMessage
+    }
+    @IBAction func newMessagClick(_ sender:UIBarButtonItem){
+        self.performSegue(withIdentifier: "MessageVC", sender: nil)
+    }
+    
+    func removeNavigationBarItem() {
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.rightBarButtonItem = nil
+        self.slideMenuController()?.removeLeftGestures()
+        self.slideMenuController()?.removeRightGestures()
+    }
+}
+extension UIImageView {
+    
+    func setRandomDownloadImage(_ width: Int, height: Int) {
+        if self.image != nil {
+            self.alpha = 1
+            return
+        }
+        self.alpha = 0
+        let url = URL(string: "http://lorempixel.com/\(width)/\(height)/")!
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 15
+        configuration.timeoutIntervalForResource = 15
+        configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
+        let session = URLSession(configuration: configuration)
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode / 100 != 2 {
+                    return
+                }
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        self.image = image
+                        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                            self.alpha = 1
+                        }, completion: { (finished: Bool) -> Void in
+                        })
+                    })
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func clipParallaxEffect(_ baseImage: UIImage?, screenSize: CGSize, displayHeight: CGFloat) {
+        if let baseImage = baseImage {
+            if displayHeight < 0 {
+                return
+            }
+            let aspect: CGFloat = screenSize.width / screenSize.height
+            let imageSize = baseImage.size
+            let imageScale: CGFloat = imageSize.height / screenSize.height
+            
+            let cropWidth: CGFloat = floor(aspect < 1.0 ? imageSize.width * aspect : imageSize.width)
+            let cropHeight: CGFloat = floor(displayHeight * imageScale)
+            
+            let left: CGFloat = (imageSize.width - cropWidth) / 2
+            let top: CGFloat = (imageSize.height - cropHeight) / 2
+            
+            let trimRect : CGRect = CGRect(x: left, y: top, width: cropWidth, height: cropHeight)
+            self.image = baseImage.trim(trimRect: trimRect)
+            self.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: displayHeight)
+        }
+    }
+}
+extension UIImage {
+    func trim(trimRect :CGRect) -> UIImage {
+        if CGRect(origin: CGPoint.zero, size: self.size).contains(trimRect) {
+            if let imageRef = self.cgImage?.cropping(to: trimRect) {
+                return UIImage(cgImage: imageRef)
+            }
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(trimRect.size, true, self.scale)
+        self.draw(in: CGRect(x: -trimRect.minX, y: -trimRect.minY, width: self.size.width, height: self.size.height))
+        let trimmedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let image = trimmedImage else { return self }
+        
+        return image
+    }
+}
 
 
 extension UIButton {
@@ -283,17 +470,7 @@ extension UIColor {
             return nil
         }
     }
-    public convenience init?(hex: Int) {
-        self.init(hex: hex, alpha: 1.0)
-    }
-    public convenience init?(hex: Int, alpha: Float) {
-        if (0x000000 ... 0xFFFFFF) ~= hex {
-            self.init(hex6: hex, alpha: alpha)
-        } else {
-            self.init()
-            return nil
-        }
-    }
+    
     
 }
 
@@ -508,10 +685,10 @@ extension UITextView {
             // Custom scheme for @mentions looks like mention:123abc
             // As with any URL, the string will have a blue color and is clickable
             
-            if let matchRange = text.range(of: word, options: .literal, range:remainingRange),
-                let escapedString = wordWithTagRemoved.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
-                attributedString.addAttribute(NSLinkAttributeName, value: "\(schemeMatch):\(escapedString)", range: text.NSRangeFromRange(matchRange))
-            }
+//            if let matchRange = text.range(of: word, options: .literal, range:remainingRange),
+//                let escapedString = wordWithTagRemoved.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+//                attributedString.addAttribute(NSLinkAttributeName, value: "\(schemeMatch):\(escapedString)", range: text.NSRangeFromRange(matchRange))
+//            }
             
             // just cycled through a word. Move the bookmark forward by the length of the word plus a space  myString.index(myString.startIndex, offsetBy: 2)
             //bookmark = bookmark.index(bookmark.startIndex,offsetBy:word.characters.count)

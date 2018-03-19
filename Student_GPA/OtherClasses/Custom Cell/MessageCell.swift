@@ -11,7 +11,7 @@ import UIKit
 class MessageCell: UITableViewCell {
 
     
-    @IBOutlet weak var userProfileImage: RemoteImageView!
+   // @IBOutlet weak var userProfileImage: RemoteImageView!
     
     @IBOutlet weak var userNameLbl: UILabel!
     
@@ -21,7 +21,7 @@ class MessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        userProfileImage.setCircleView(width: userProfileImage.bounds.width)
+        //userProfileImage.setCircleView(width: userProfileImage.bounds.width)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

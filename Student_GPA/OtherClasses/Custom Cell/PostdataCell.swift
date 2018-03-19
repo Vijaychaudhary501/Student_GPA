@@ -16,7 +16,7 @@ class PostdataCell: UITableViewCell {
     @IBOutlet weak var userView: UIView!
     @IBOutlet weak var userNameLbl: UILabel!
     
-    @IBOutlet weak var profileImageview: RemoteImageView!
+   @IBOutlet weak var profileImageview: RemoteImageView!
     
     @IBOutlet weak var timeLbl: UILabel!
     
@@ -45,7 +45,7 @@ class PostdataCell: UITableViewCell {
     @IBOutlet weak var cmntLblHeight: NSLayoutConstraint!
     
     
-    @IBOutlet weak var descTextView: RegeributedTextView!
+   // @IBOutlet weak var descTextView: RegeributedTextView!
     
     
     
@@ -57,7 +57,7 @@ class PostdataCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        profileImageview.setCircleView(width: profileImageview.bounds.width)
+       // profileImageview.setCircleView(width: profileImageview.bounds.width)
         
         playerController = AVPlayerViewController()
         postDataView.addSubview(playerController!.view)
@@ -72,8 +72,8 @@ class PostdataCell: UITableViewCell {
 //MARK:TEXTVIEW
     
     func setCellText(_ text:String){
-        descTextView.text = text
-        descTextView.resolveHashTags()
+//        descTextView.text = text
+//        descTextView.resolveHashTags()
     }
     
     

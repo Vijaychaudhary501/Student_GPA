@@ -10,7 +10,7 @@ import UIKit
 
 class NotificationCell: UITableViewCell {
     
-    @IBOutlet weak var notificaionImage: RemoteImageView!
+   // @IBOutlet weak var notificaionImage: RemoteImageView!
     
     @IBOutlet weak var userNameLbl: UILabel!
     

@@ -9,11 +9,11 @@
 import UIKit
 
 class ImageCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var imageSelected: RemoteImageView!
+   // @IBOutlet weak var imageSelected: RemoteImageView!
     
     @IBOutlet weak var deleteBtn: UIButton!
     
     @IBOutlet weak var addBtn: UIButton!
     
-    @IBOutlet weak var storyProfImage: RemoteImageView!
+    //@IBOutlet weak var storyProfImage: RemoteImageView!
 }

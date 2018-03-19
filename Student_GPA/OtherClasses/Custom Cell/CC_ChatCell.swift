@@ -14,14 +14,14 @@ class CC_ChatCell: UITableViewCell {
     @IBOutlet weak var vWReciver:UIView!
     @IBOutlet weak var vWSender:UIView!
     
-    @IBOutlet weak var imgVwReciverChatBg:RemoteImageView!
+  //  @IBOutlet weak var imgVwReciverChatBg:RemoteImageView!
     @IBOutlet weak var txtVwReciverChat:UITextView!
     @IBOutlet weak var lblReciverTime:UILabel!
     
     @IBOutlet weak var constraintImgVwReciver:NSLayoutConstraint!
     @IBOutlet weak var constraintImgVwHeightReciver:NSLayoutConstraint!
     
-    @IBOutlet weak var imgVwSenderChatBg:RemoteImageView!
+   // @IBOutlet weak var imgVwSenderChatBg:RemoteImageView!
     @IBOutlet weak var txtVwSenderChat:UITextView!
     @IBOutlet weak var lblSenderTime:UILabel!
     

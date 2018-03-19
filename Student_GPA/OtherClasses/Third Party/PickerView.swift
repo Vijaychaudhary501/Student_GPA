@@ -244,13 +244,13 @@ class PickerView: UIView, UIPickerViewDelegate {
         //Title
         self.titleLabel = UILabel(frame: CGRect(x :screenSize.width/3 ,y: 10,width: screenSize.width/3, height:30))
         self.titleLabel.textAlignment = NSTextAlignment.center
-        self.titleLabel.textColor = UIColor(hex: 0x333333, alpha: 1.0)
+        self.titleLabel.textColor = UIColor(hex: "0x333333", alpha: 1.0)
         //UIColor(hex: 0x333333)
         self.titleLabel.font = UIFont(name: "AvenirNext-Medium", size: 16)
         dialogContainer.addSubview(self.titleLabel)
         
         self.picker = UIPickerView(frame: CGRect(x:0,y: 30,width: 0, height: 0))
-        self.picker.setValue(UIColor(hex: 0x333333, alpha: 1.0), forKeyPath: "textColor")
+        self.picker.setValue(UIColor(hex: "0x333333", alpha: 1.0), forKeyPath: "textColor")
         self.picker.autoresizingMask = UIViewAutoresizing.flexibleRightMargin
         self.picker.frame.size.width = screenSize.width
         picker.showsSelectionIndicator = false
@@ -272,8 +272,8 @@ class PickerView: UIView, UIPickerViewDelegate {
         self.cancelButton = UIButton(type: UIButtonType.custom) as UIButton
         self.cancelButton.frame = CGRect(x: 0, y: 10, width: screenSize.width/3, height: kPickerDialogDefaultButtonHeight)
         //CGRect(x: 0,y:container.bounds.size.height - kPickerDialogDefaultButtonHeight,widht: buttonWidth,height: kPickerDialogDefaultButtonHeight)
-        self.cancelButton.setTitleColor(UIColor(hex: 0x555555,alpha: 1.0), for: UIControlState.normal)
-        self.cancelButton.setTitleColor(UIColor(hex: 0x555555,alpha: 1.0), for: UIControlState.highlighted)
+        self.cancelButton.setTitleColor(UIColor(hex: "0x555555",alpha: 1.0), for: UIControlState.normal)
+        self.cancelButton.setTitleColor(UIColor(hex: "0x555555",alpha: 1.0), for: UIControlState.highlighted)
         self.cancelButton.titleLabel!.font = UIFont(name: "Avenir-Book", size: 15)
         self.cancelButton.layer.cornerRadius = kPickerDialogCornerRadius
         
@@ -284,8 +284,8 @@ class PickerView: UIView, UIPickerViewDelegate {
         self.doneButton.frame = CGRect(x: (screenSize.width/3) * 2, y: 10, width:screenSize.width / 3, height: kPickerDialogDefaultButtonHeight)
         //CGRectMake(buttonWidth,container.bounds.size.height - kPickerDialogDefaultButtonHeight,buttonWidth,kPickerDialogDefaultButtonHeight)
         self.doneButton.tag = kPickerDialogDoneButtonTag
-        self.doneButton.setTitleColor(UIColor(hex: 0x2e7fb7,alpha: 1.0), for: UIControlState.normal)
-        self.doneButton.setTitleColor(UIColor(hex: 0x2e7fb7,alpha: 1.0), for
+        self.doneButton.setTitleColor(UIColor(hex: "0x2e7fb7",alpha: 1.0), for: UIControlState.normal)
+        self.doneButton.setTitleColor(UIColor(hex: "0x2e7fb7",alpha: 1.0), for
             : UIControlState.highlighted)
         self.doneButton.titleLabel!.font = UIFont(name: "AvenirNext-Medium", size: 15)
         self.doneButton.layer.cornerRadius = kPickerDialogCornerRadius

@@ -11,7 +11,7 @@ import UIKit
 class CommentCell: UITableViewCell {
 
     
-    @IBOutlet weak var userProfImage: RemoteImageView!
+   @IBOutlet weak var userProfImage: RemoteImageView!
     
     @IBOutlet weak var userName: UILabel!
     
@@ -23,7 +23,7 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var cmntBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        userProfImage.setCircleView(width: userProfImage.bounds.width)
+        //userProfImage.setCircleView(width: userProfImage.bounds.width)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -10,7 +10,7 @@ import UIKit
 
 class InsightCell: UITableViewCell {
 
-    @IBOutlet weak var profileImgView: RemoteImageView!
+   // @IBOutlet weak var profileImgView: RemoteImageView!
     
     @IBOutlet weak var userNameLbl: UILabel!
     
@@ -22,7 +22,7 @@ class InsightCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        profileImgView.setCircleView(width: profileImgView.bounds.width)
+       // profileImgView.setCircleView(width: profileImgView.bounds.width)
     }
 
     @IBOutlet weak var imgBtn: UIButton!

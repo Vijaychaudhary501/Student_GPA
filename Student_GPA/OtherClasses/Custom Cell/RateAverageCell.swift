@@ -10,7 +10,7 @@ import UIKit
 
 class RateAverageCell: UITableViewCell {
     
-    @IBOutlet weak var userProfImage: RemoteImageView!
+   // @IBOutlet weak var userProfImage: RemoteImageView!
 
      @IBOutlet weak var lblTeacherName: UILabel!
     

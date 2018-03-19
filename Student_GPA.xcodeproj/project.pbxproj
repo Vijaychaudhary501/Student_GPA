@@ -52,8 +52,6 @@
 		1507CDFF2059755100A169E6 /* SG_MyClassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507CDDF2059755100A169E6 /* SG_MyClassVC.swift */; };
 		1507CE002059755100A169E6 /* SG_MypostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507CDE02059755100A169E6 /* SG_MypostVC.swift */; };
 		1507CE012059755100A169E6 /* SG_ClassStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507CDE12059755100A169E6 /* SG_ClassStudentVC.swift */; };
-		150D80EC20598C7100527AF8 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150D808920598BC900527AF8 /* XLPagerTabStrip.framework */; };
-		150D80ED20598C7100527AF8 /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150D808920598BC900527AF8 /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		150D813720598D7900527AF8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150D80F320598D7900527AF8 /* Extensions.swift */; };
 		150D813820598D7900527AF8 /* GroupstudyviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150D80F520598D7900527AF8 /* GroupstudyviewCell.swift */; };
 		150D813920598D7900527AF8 /* Menubar_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150D80F620598D7900527AF8 /* Menubar_Cell.swift */; };
@@ -118,6 +116,24 @@
 		150D81772059A01F00527AF8 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150D81762059A01F00527AF8 /* Utility.swift */; };
 		150FB24D205D9ACF00C33791 /* SG_CreatePostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 150FB24B205D9ACF00C33791 /* SG_CreatePostCell.xib */; };
 		150FB24F205D9B0700C33791 /* SG_CreatePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FB24E205D9B0600C33791 /* SG_CreatePostCell.swift */; };
+		1510F49F2060425700C7FDCA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1510F4812060425400C7FDCA /* Info.plist */; };
+		1510F4A02060425700C7FDCA /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1510F4832060425400C7FDCA /* ButtonCell.xib */; };
+		1510F4A12060425700C7FDCA /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4842060425400C7FDCA /* SwipeDirection.swift */; };
+		1510F4A22060425700C7FDCA /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4852060425400C7FDCA /* TwitterPagerTabStripViewController.swift */; };
+		1510F4A32060425700C7FDCA /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4862060425400C7FDCA /* IndicatorInfo.swift */; };
+		1510F4A42060425700C7FDCA /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4872060425400C7FDCA /* FXPageControl.m */; };
+		1510F4A52060425700C7FDCA /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4882060425400C7FDCA /* SegmentedPagerTabStripViewController.swift */; };
+		1510F4A62060425700C7FDCA /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4892060425400C7FDCA /* ButtonBarView.swift */; };
+		1510F4A72060425700C7FDCA /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F48A2060425400C7FDCA /* BarView.swift */; };
+		1510F4A82060425700C7FDCA /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F48B2060425400C7FDCA /* PagerTabStripBehaviour.swift */; };
+		1510F4A92060425700C7FDCA /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F48C2060425400C7FDCA /* ButtonBarViewCell.swift */; };
+		1510F4AA2060425700C7FDCA /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F48E2060425400C7FDCA /* PagerTabStripError.swift */; };
+		1510F4AB2060425700C7FDCA /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F48F2060425400C7FDCA /* BarPagerTabStripViewController.swift */; };
+		1510F4AC2060425700C7FDCA /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4902060425400C7FDCA /* PagerTabStripViewController.swift */; };
+		1510F4AD2060425700C7FDCA /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4912060425400C7FDCA /* BaseButtonBarPagerTabStripViewController.swift */; };
+		1510F4AE2060425700C7FDCA /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4922060425400C7FDCA /* ButtonBarPagerTabStripViewController.swift */; };
+		1510F4AF2060425700C7FDCA /* XLPagerTabStripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510F4942060425500C7FDCA /* XLPagerTabStripTests.swift */; };
+		1510F4B02060425700C7FDCA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1510F4952060425500C7FDCA /* Info.plist */; };
 		1542DDDE205856FD0092A61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1542DDDC205856FD0092A61F /* Main.storyboard */; };
 		1542DDE1205856FD0092A61F /* Student_GPA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1542DDDF205856FD0092A61F /* Student_GPA.xcdatamodeld */; };
 		1542DDE3205856FD0092A61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1542DDE2205856FD0092A61F /* Assets.xcassets */; };
@@ -129,26 +145,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		150D808820598BC900527AF8 /* PBXContainerItemProxy */ = {
+		1510F49B2060425700C7FDCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 150D808320598BC900527AF8 /* XLPagerTabStrip.xcodeproj */;
+			containerPortal = 1510F4962060425600C7FDCA /* XLPagerTabStrip.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 28F8287D1C494B2C00330CF4;
 			remoteInfo = XLPagerTabStrip;
 		};
-		150D808A20598BC900527AF8 /* PBXContainerItemProxy */ = {
+		1510F49D2060425700C7FDCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 150D808320598BC900527AF8 /* XLPagerTabStrip.xcodeproj */;
+			containerPortal = 1510F4962060425600C7FDCA /* XLPagerTabStrip.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 28F828871C494B2C00330CF4;
 			remoteInfo = XLPagerTabStripTests;
-		};
-		150D80EE20598C7100527AF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 150D808320598BC900527AF8 /* XLPagerTabStrip.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 28F8287C1C494B2C00330CF4;
-			remoteInfo = XLPagerTabStrip;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -159,7 +168,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				150D80ED20598C7100527AF8 /* XLPagerTabStrip.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +222,6 @@
 		1507CDDF2059755100A169E6 /* SG_MyClassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG_MyClassVC.swift; sourceTree = "<group>"; };
 		1507CDE02059755100A169E6 /* SG_MypostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG_MypostVC.swift; sourceTree = "<group>"; };
 		1507CDE12059755100A169E6 /* SG_ClassStudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG_ClassStudentVC.swift; sourceTree = "<group>"; };
-		150D808320598BC900527AF8 /* XLPagerTabStrip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XLPagerTabStrip.xcodeproj; path = "../../ios-insight-sanjay-master-273e8f424b7cd18eca3ed5e4de55c07242b3c529/Pods/XLPagerTabStrip.xcodeproj"; sourceTree = "<group>"; };
 		150D80F320598D7900527AF8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		150D80F520598D7900527AF8 /* GroupstudyviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupstudyviewCell.swift; sourceTree = "<group>"; };
 		150D80F620598D7900527AF8 /* Menubar_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menubar_Cell.swift; sourceTree = "<group>"; };
@@ -283,6 +290,27 @@
 		150D81762059A01F00527AF8 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		150FB24B205D9ACF00C33791 /* SG_CreatePostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SG_CreatePostCell.xib; sourceTree = "<group>"; };
 		150FB24E205D9B0600C33791 /* SG_CreatePostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG_CreatePostCell.swift; sourceTree = "<group>"; };
+		1510F4802060425400C7FDCA /* XLPagerTabStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPagerTabStrip.h; sourceTree = "<group>"; };
+		1510F4812060425400C7FDCA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1510F4832060425400C7FDCA /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		1510F4842060425400C7FDCA /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		1510F4852060425400C7FDCA /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1510F4862060425400C7FDCA /* IndicatorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorInfo.swift; sourceTree = "<group>"; };
+		1510F4872060425400C7FDCA /* FXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXPageControl.m; sourceTree = "<group>"; };
+		1510F4882060425400C7FDCA /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1510F4892060425400C7FDCA /* ButtonBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
+		1510F48A2060425400C7FDCA /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		1510F48B2060425400C7FDCA /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
+		1510F48C2060425400C7FDCA /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		1510F48D2060425400C7FDCA /* FXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXPageControl.h; sourceTree = "<group>"; };
+		1510F48E2060425400C7FDCA /* PagerTabStripError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripError.swift; sourceTree = "<group>"; };
+		1510F48F2060425400C7FDCA /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1510F4902060425400C7FDCA /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1510F4912060425400C7FDCA /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1510F4922060425400C7FDCA /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1510F4942060425500C7FDCA /* XLPagerTabStripTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLPagerTabStripTests.swift; sourceTree = "<group>"; };
+		1510F4952060425500C7FDCA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1510F4962060425600C7FDCA /* XLPagerTabStrip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XLPagerTabStrip.xcodeproj; path = Pods/XLPagerTabStrip.xcodeproj; sourceTree = "<group>"; };
 		1542DDD5205856FD0092A61F /* Student_GPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Student_GPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1542DDDD205856FD0092A61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1542DDE0205856FD0092A61F /* Student_GPA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student_GPA.xcdatamodel; sourceTree = "<group>"; };
@@ -303,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				161C49BBB255FA9B02EEFE0D /* Pods_Student_GPA.framework in Frameworks */,
-				150D80EC20598C7100527AF8 /* XLPagerTabStrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,15 +352,6 @@
 				1507CDBC2059728600A169E6 /* AppDelegate.swift */,
 			);
 			path = Appdelegate;
-			sourceTree = "<group>";
-		};
-		150D808420598BC900527AF8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				150D808920598BC900527AF8 /* XLPagerTabStrip.framework */,
-				150D808B20598BC900527AF8 /* XLPagerTabStripTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		150D80F120598D7900527AF8 /* OtherClasses */ = {
@@ -459,6 +477,59 @@
 			path = Webservice;
 			sourceTree = "<group>";
 		};
+		1510F47F2060425400C7FDCA /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				1510F4802060425400C7FDCA /* XLPagerTabStrip.h */,
+				1510F4812060425400C7FDCA /* Info.plist */,
+			);
+			name = XLPagerTabStrip;
+			path = Pods/XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		1510F4822060425400C7FDCA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1510F4832060425400C7FDCA /* ButtonCell.xib */,
+				1510F4842060425400C7FDCA /* SwipeDirection.swift */,
+				1510F4852060425400C7FDCA /* TwitterPagerTabStripViewController.swift */,
+				1510F4862060425400C7FDCA /* IndicatorInfo.swift */,
+				1510F4872060425400C7FDCA /* FXPageControl.m */,
+				1510F4882060425400C7FDCA /* SegmentedPagerTabStripViewController.swift */,
+				1510F4892060425400C7FDCA /* ButtonBarView.swift */,
+				1510F48A2060425400C7FDCA /* BarView.swift */,
+				1510F48B2060425400C7FDCA /* PagerTabStripBehaviour.swift */,
+				1510F48C2060425400C7FDCA /* ButtonBarViewCell.swift */,
+				1510F48D2060425400C7FDCA /* FXPageControl.h */,
+				1510F48E2060425400C7FDCA /* PagerTabStripError.swift */,
+				1510F48F2060425400C7FDCA /* BarPagerTabStripViewController.swift */,
+				1510F4902060425400C7FDCA /* PagerTabStripViewController.swift */,
+				1510F4912060425400C7FDCA /* BaseButtonBarPagerTabStripViewController.swift */,
+				1510F4922060425400C7FDCA /* ButtonBarPagerTabStripViewController.swift */,
+			);
+			name = Sources;
+			path = Pods/Sources;
+			sourceTree = "<group>";
+		};
+		1510F4932060425500C7FDCA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1510F4942060425500C7FDCA /* XLPagerTabStripTests.swift */,
+				1510F4952060425500C7FDCA /* Info.plist */,
+			);
+			name = Tests;
+			path = Pods/Tests;
+			sourceTree = "<group>";
+		};
+		1510F4972060425600C7FDCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1510F49C2060425700C7FDCA /* XLPagerTabStrip.framework */,
+				1510F49E2060425700C7FDCA /* XLPagerTabStripTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1542DDCC205856FD0092A61F = {
 			isa = PBXGroup;
 			children = (
@@ -559,7 +630,10 @@
 		7421E115CD4F07C588B7EFCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				150D808320598BC900527AF8 /* XLPagerTabStrip.xcodeproj */,
+				1510F4822060425400C7FDCA /* Sources */,
+				1510F4932060425500C7FDCA /* Tests */,
+				1510F47F2060425400C7FDCA /* XLPagerTabStrip */,
+				1510F4962060425600C7FDCA /* XLPagerTabStrip.xcodeproj */,
 				433C764EB485AECF107B46C5 /* Pods_Student_GPA.framework */,
 			);
 			name = Frameworks;
@@ -583,7 +657,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				150D80EF20598C7100527AF8 /* PBXTargetDependency */,
 			);
 			name = Student_GPA;
 			productName = Student_GPA;
@@ -625,8 +698,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 150D808420598BC900527AF8 /* Products */;
-					ProjectRef = 150D808320598BC900527AF8 /* XLPagerTabStrip.xcodeproj */;
+					ProductGroup = 1510F4972060425600C7FDCA /* Products */;
+					ProjectRef = 1510F4962060425600C7FDCA /* XLPagerTabStrip.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -637,18 +710,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		150D808920598BC900527AF8 /* XLPagerTabStrip.framework */ = {
+		1510F49C2060425700C7FDCA /* XLPagerTabStrip.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = XLPagerTabStrip.framework;
-			remoteRef = 150D808820598BC900527AF8 /* PBXContainerItemProxy */;
+			remoteRef = 1510F49B2060425700C7FDCA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		150D808B20598BC900527AF8 /* XLPagerTabStripTests.xctest */ = {
+		1510F49E2060425700C7FDCA /* XLPagerTabStripTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = XLPagerTabStripTests.xctest;
-			remoteRef = 150D808A20598BC900527AF8 /* PBXContainerItemProxy */;
+			remoteRef = 1510F49D2060425700C7FDCA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -666,7 +739,10 @@
 				150FB24D205D9ACF00C33791 /* SG_CreatePostCell.xib in Resources */,
 				150D813D20598D7900527AF8 /* MessageCell.xib in Resources */,
 				15067D6E205C19A40000229F /* ImageHeaderView.xib in Resources */,
+				1510F4B02060425700C7FDCA /* Info.plist in Resources */,
+				1510F49F2060425700C7FDCA /* Info.plist in Resources */,
 				150D815420598D7900527AF8 /* InsightCell.xib in Resources */,
+				1510F4A02060425700C7FDCA /* ButtonCell.xib in Resources */,
 				150D813C20598D7900527AF8 /* MyProfileCell.xib in Resources */,
 				1542DDE3205856FD0092A61F /* Assets.xcassets in Resources */,
 				1542DDDE205856FD0092A61F /* Main.storyboard in Resources */,
@@ -753,6 +829,7 @@
 			files = (
 				150D815820598D7900527AF8 /* CornerpointView.swift in Sources */,
 				150D814120598D7900527AF8 /* ContactCell.swift in Sources */,
+				1510F4A42060425700C7FDCA /* FXPageControl.m in Sources */,
 				1507CDEC2059755100A169E6 /* SG_MessagesVC.swift in Sources */,
 				15067D74205C1A780000229F /* BaseTableViewCell.swift in Sources */,
 				1507CDF92059755100A169E6 /* SG_NotificationVC.swift in Sources */,
@@ -764,34 +841,45 @@
 				150D81772059A01F00527AF8 /* Utility.swift in Sources */,
 				150D813B20598D7900527AF8 /* CC_ChatCell.swift in Sources */,
 				150D816520598D7A00527AF8 /* FAScrollView.swift in Sources */,
+				1510F4A32060425700C7FDCA /* IndicatorInfo.swift in Sources */,
 				150D814C20598D7900527AF8 /* ViewGroupStudyCell.swift in Sources */,
+				1510F4AD2060425700C7FDCA /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
 				150D816E20598D7A00527AF8 /* SG_POST_DATA.swift in Sources */,
 				15067D68205C16D10000229F /* MainViewController.swift in Sources */,
+				1510F4A72060425700C7FDCA /* BarView.swift in Sources */,
 				150D813820598D7900527AF8 /* GroupstudyviewCell.swift in Sources */,
 				1507CDEA2059755100A169E6 /* SG_SendmessageVC.swift in Sources */,
 				1507CE002059755100A169E6 /* SG_MypostVC.swift in Sources */,
 				1507CDFF2059755100A169E6 /* SG_MyClassVC.swift in Sources */,
+				1510F4AB2060425700C7FDCA /* BarPagerTabStripViewController.swift in Sources */,
 				150D816F20598D7A00527AF8 /* ClassList.swift in Sources */,
 				150D815B20598D7900527AF8 /* SwiftyCamViewController.swift in Sources */,
 				150D816720598D7A00527AF8 /* RemoteImageView.m in Sources */,
 				1507CDE72059755100A169E6 /* SG_DashboardVC.swift in Sources */,
+				1510F4A12060425700C7FDCA /* SwipeDirection.swift in Sources */,
 				150D815D20598D7900527AF8 /* KDCircularProgress.swift in Sources */,
 				1507CDFD2059755100A169E6 /* SG_FilterviewVC.swift in Sources */,
 				150D814E20598D7900527AF8 /* RateofteacherCell.swift in Sources */,
 				150D815920598D7900527AF8 /* UIImage+Additions.swift in Sources */,
 				150D814420598D7900527AF8 /* PostdataCell.swift in Sources */,
 				1507CDF62059755100A169E6 /* SG_PostfilterVC.swift in Sources */,
+				1510F4A22060425700C7FDCA /* TwitterPagerTabStripViewController.swift in Sources */,
 				150D814920598D7900527AF8 /* NotificationCell.swift in Sources */,
 				150D814320598D7900527AF8 /* InsightCell.swift in Sources */,
 				1507CDE62059755100A169E6 /* SG_InsightVC.swift in Sources */,
+				1510F4A92060425700C7FDCA /* ButtonBarViewCell.swift in Sources */,
 				1507CDC02059754000A169E6 /* EditPostVC.swift in Sources */,
+				1510F4AA2060425700C7FDCA /* PagerTabStripError.swift in Sources */,
 				1507CE012059755100A169E6 /* SG_ClassStudentVC.swift in Sources */,
 				15067D67205C16D10000229F /* LeftViewController.swift in Sources */,
 				150D815520598D7900527AF8 /* CommentCell.swift in Sources */,
 				150D816320598D7A00527AF8 /* Reachability.swift in Sources */,
+				1510F4A82060425700C7FDCA /* PagerTabStripBehaviour.swift in Sources */,
 				1507CDE42059755100A169E6 /* SG_CommentVCViewController.swift in Sources */,
 				1507CDF52059755100A169E6 /* SG_GroupstudyVC.swift in Sources */,
+				1510F4AF2060425700C7FDCA /* XLPagerTabStripTests.swift in Sources */,
 				1507CDEE2059755100A169E6 /* SG_OnlyMyPostVC.swift in Sources */,
+				1510F4A62060425700C7FDCA /* ButtonBarView.swift in Sources */,
 				150D813920598D7900527AF8 /* Menubar_Cell.swift in Sources */,
 				150D816920598D7A00527AF8 /* TableChildExampleViewController.swift in Sources */,
 				150D816A20598D7A00527AF8 /* CC_Model_UserList.swift in Sources */,
@@ -812,6 +900,7 @@
 				1507CDED2059755100A169E6 /* SG_ClassCourseListVC.swift in Sources */,
 				150D814520598D7900527AF8 /* ImageCollectionCell.swift in Sources */,
 				150D816820598D7A00527AF8 /* PostCell.swift in Sources */,
+				1510F4AC2060425700C7FDCA /* PagerTabStripViewController.swift in Sources */,
 				1507CDEF2059755100A169E6 /* SG_CreateProfileVC.swift in Sources */,
 				150D816420598D7A00527AF8 /* UIButton+Badge.m in Sources */,
 				1507CDF02059755100A169E6 /* SG_SelectPhotoVC.swift in Sources */,
@@ -834,7 +923,9 @@
 				1507CDE82059755100A169E6 /* SG_SwiftyRecordButton.swift in Sources */,
 				150D815F20598D7900527AF8 /* CornerpointClientProtocol.swift in Sources */,
 				1507CDE52059755100A169E6 /* SG_SplashVC.swift in Sources */,
+				1510F4AE2060425700C7FDCA /* ButtonBarPagerTabStripViewController.swift in Sources */,
 				1507CDF72059755100A169E6 /* SG_RatemyteacherVC.swift in Sources */,
+				1510F4A52060425700C7FDCA /* SegmentedPagerTabStripViewController.swift in Sources */,
 				1507CDF42059755100A169E6 /* SG_AddgroupstudyVC.swift in Sources */,
 				150D813720598D7900527AF8 /* Extensions.swift in Sources */,
 				150D815020598D7900527AF8 /* RateAverageCell.swift in Sources */,
@@ -850,14 +941,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		150D80EF20598C7100527AF8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XLPagerTabStrip;
-			targetProxy = 150D80EE20598C7100527AF8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1507CDB72059709900A169E6 /* SG_Main.storyboard */ = {

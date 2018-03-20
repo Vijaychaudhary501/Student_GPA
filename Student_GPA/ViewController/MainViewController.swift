@@ -40,6 +40,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.CTView.isHidden = true
         tableView.estimatedRowHeight = 85.0
         tableView.rowHeight = UITableViewAutomaticDimension
         isselectedIndex = 0
@@ -49,7 +50,6 @@ class MainViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(postdoubleTapped(gesture:)))
         tap.numberOfTapsRequired = 2
         postBtn.addGestureRecognizer(tap)
-        self.postListAPICall(page:0,postType:post_Type)
     }
     func  postdoubleTapped(gesture: UITapGestureRecognizer){
         self.performSegue(withIdentifier: "PostfilterVC", sender: nil)
@@ -89,16 +89,21 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func postBtnClicked(_ sender:UIButton){
+        self.tableView.isHidden = false
+        self.CTView.isHidden =  true
         postBtn.backgroundColor = UIColor.init(hex: "FF8400")
         notificationBtn.backgroundColor = UIColor.init(hex: "CBCBCB")
         messageBtn.backgroundColor = UIColor.init(hex: "CBCBCB")
     }
     @IBAction func notificationBtnClicked(_ sender:UIButton){
+        self.tableView.isHidden = true
+        self.CTView.isHidden =  false
         postBtn.backgroundColor = UIColor.init(hex: "CBCBCB")
         notificationBtn.backgroundColor = UIColor.init(hex: "FF8400")
         messageBtn.backgroundColor = UIColor.init(hex: "CBCBCB")
     }
     @IBAction func messageBtnClicked(_ sender:UIButton){
+
         postBtn.backgroundColor = UIColor.init(hex: "CBCBCB")
         notificationBtn.backgroundColor = UIColor.init(hex: "CBCBCB")
         messageBtn.backgroundColor = UIColor.init(hex: "FF8400")
@@ -111,8 +116,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showNotification(_:)), name: NSNotification.Name(rawValue: "searchPost"), object: nil)
-        
+        self.postListAPICall(page:0,postType:post_Type)
     }
     func postListAPICall(page:Int,postType:String){
 //        let dict = [String:Any]()
@@ -385,7 +389,6 @@ extension MainViewController : UITableViewDataSource ,UIImagePickerControllerDel
         self.likeServiceCall(tag: sender.tag)
     }
     func likeServiceCall(tag:Int){
-        print(tag)
         let likeIndexPath = IndexPath(row: tag, section: 0)
         let cell = self.tableView.cellForRow(at: likeIndexPath) as! PostdataCell
         
@@ -520,10 +523,11 @@ extension MainViewController : UITableViewDataSource ,UIImagePickerControllerDel
             
             fileManager.createFile(atPath: filePathtoWrite as String, contents: imageData, attributes: nil)
             
-            self.dismiss(animated: true, completion: nil)
+            
             let newVC = SG_SelectPhotoVC(imageurl: image)
             newVC.delegate = self
             self.navigationController?.pushViewController(newVC, animated: true)
+            self.dismiss(animated: true, completion: nil)
             
             
         }else {

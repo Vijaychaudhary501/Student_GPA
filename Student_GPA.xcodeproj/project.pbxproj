@@ -138,6 +138,7 @@
 		1542DDE1205856FD0092A61F /* Student_GPA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1542DDDF205856FD0092A61F /* Student_GPA.xcdatamodeld */; };
 		1542DDE3205856FD0092A61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1542DDE2205856FD0092A61F /* Assets.xcassets */; };
 		1542DDE6205856FD0092A61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1542DDE4205856FD0092A61F /* LaunchScreen.storyboard */; };
+		15D2672E2061859B002B3D21 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1510F49C2060425700C7FDCA /* XLPagerTabStrip.framework */; };
 		15EBCC5F205858FB00464529 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBCC5E205858FB00464529 /* BaseViewController.swift */; };
 		15EBCC62205859E100464529 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBCC61205859E100464529 /* Constant.swift */; };
 		15EBCC6420585A0900464529 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBCC6320585A0900464529 /* LoginViewController.swift */; };
@@ -330,6 +331,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D2672E2061859B002B3D21 /* XLPagerTabStrip.framework in Frameworks */,
 				161C49BBB255FA9B02EEFE0D /* Pods_Student_GPA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
